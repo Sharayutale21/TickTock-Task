@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Timetable</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📅 My Daily Timetable</h1>
+
+    <div class="actions">
+      <button id="dark-toggle">🌙 Dark Mode</button>
+      <button id="clear-all">🧹 Clear All</button>
+      <button id="download">📥 Export to PDF</button>
+    </div>
+
+    <div class="input-group">
+      <select id="time-select">
+        <option value="">Select time</option>
+        <option>9 AM</option><option>10 AM</option><option>11 AM</option><option>12 PM</option>
+        <option>1 PM</option><option>2 PM</option><option>3 PM</option><option>4 PM</option><option>5 PM</option>
+      </select>
+      <input type="text" id="task-input" placeholder="Enter your task" />
+      <button id="add-btn">Add Task</button>
+    </div>
+
+    <table id="timetable">
+      <thead>
+        <tr><th>Time</th><th>Task</th><th>Done</th></tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Rows will render here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
